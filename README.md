@@ -7,3 +7,9 @@ week6: Implement the store and time limit, level limit
 week7: Finishing up  
 week8: Testing  
 week9: Present  
+  
+  
+Để tránh lỗi không merge được vào master và tránh conflict  
+Nếu tạo branch mới thì git checkout -b master (checkout branch mới từ master ra nhé)  
+pull code mới về hằng ngày tránh conflict nặng  
+xong 1 chức năng nhỏ commit luôn  
