@@ -13,3 +13,9 @@ week9: Present
 Nếu tạo branch mới thì git checkout -b master (checkout branch mới từ master ra nhé)  
 pull code mới về hằng ngày tránh conflict nặng  
 xong 1 chức năng nhỏ commit luôn  
+  
+  
+Week 5 Task:  
+An: Draw Animation Miner, Mouse, Background, Apply in Project  
+Linh: Generate Treasure for map  
+Dat: Drop Hook, Pull Hook, Bomb  
