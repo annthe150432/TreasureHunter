@@ -19,3 +19,9 @@ Week 5 Task:
 An: Draw Animation Miner, Mouse, Background, Apply in Project  
 Linh: Generate Treasure for map  
 Dat: Drop Hook, Pull Hook, Bomb  
+  
+  
+Week 6 Task:  
+An: Timer, Scoring system, Treasure Value, Read data from file
+Linh: Generate map, Read data from file
+Dat: Grab Treasure
