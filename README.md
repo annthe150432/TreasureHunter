@@ -22,6 +22,6 @@ Dat: Drop Hook, Pull Hook, Bomb
   
   
 Week 6 Task:  
-An: Timer, Scoring system, Treasure Value, Read data from file
-Linh: Generate map, Read data from file
-Dat: Grab Treasure
+An: Timer, Scoring system, Treasure Value, Read data from file  
+Linh: Generate map, Read data from file  
+Dat: Grab Treasure  
