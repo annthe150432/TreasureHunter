@@ -4,10 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+
+  - Miner
+  - HookSwing
+
   - CurrentMoney
   - TargetMoney
   - CountdownTimer
   - Clock
+
   layers:
   - Default
   - TransparentFX

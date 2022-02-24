@@ -1,32 +1,28 @@
 fileFormatVersion: 2
-guid: 46d58bc6c8df202439d1ff7087c1096a
+guid: 23bdd49e6104e334fae83e7c2ec36167
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6407625475132294341
-    second: drop_0
+      213: -2478443863562118891
+    second: Claws_0
   - first:
-      213: -8728266042444374361
-    second: drop_1
+      213: 8869396339347144186
+    second: Claws_1
   - first:
-      213: -5572684905488297484
-    second: drop_2
+      213: -6431655651261584464
+    second: Claws_2
   - first:
-      213: 4828175805642924288
-    second: drop_3
+      213: -4221186711847376335
+    second: Claws_3
   - first:
-      213: 1826380237626979740
-    second: drop_4
+      213: -5637731003693258109
+    second: Hook
   - first:
-      213: 726018800532935108
-    second: drop_5
+      213: 3900645401193532765
+    second: Claws_5
   - first:
-      213: -5388568210006424365
-    second: drop_6
-  - first:
-      213: 4592916962296341008
-    second: drop_7
-
+      213: -2454403272589309759
+    second: Claws_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -71,9 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-
-
-  spritePixelsToUnits: 550
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -118,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: drop_0
+      name: Claws_0
       rect:
         serializedVersion: 2
-        x: 617
-        y: 2470
-        width: 1433
-        height: 2080
+        x: 2
+        y: 75
+        width: 52
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c4010bab657ce850800000000000000
-      internalID: 6407625475132294341
+      spriteID: 51912acff6cca9dd0800000000000000
+      internalID: -2478443863562118891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drop_1
+      name: Claws_1
       rect:
         serializedVersion: 2
-        x: 2689
-        y: 2470
-        width: 1436
-        height: 2080
+        x: 59
+        y: 69
+        width: 52
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ae9ffa5748fed680800000000000000
-      internalID: -8728266042444374361
+      spriteID: afdbfe28afc661b70800000000000000
+      internalID: 8869396339347144186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drop_2
+      name: Claws_2
       rect:
         serializedVersion: 2
-        x: 4572
-        y: 2470
-        width: 1433
-        height: 2080
+        x: 118
+        y: 69
+        width: 50
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f150339a98d9a2b0800000000000000
-      internalID: -5572684905488297484
+      spriteID: 0bb6be4f24b2eb6a0800000000000000
+      internalID: -6431655651261584464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drop_3
+      name: Claws_3
       rect:
         serializedVersion: 2
-        x: 6336
-        y: 2470
-        width: 1433
-        height: 2080
+        x: 175
+        y: 69
+        width: 50
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0016b708050210340800000000000000
-      internalID: 4828175805642924288
+      spriteID: 13aecb5ec055b65c0800000000000000
+      internalID: -4221186711847376335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drop_4
+      name: Hook
       rect:
         serializedVersion: 2
-        x: 617
-        y: 67
-        width: 1433
-        height: 2084
+        x: 4
+        y: 2
+        width: 50
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c95bc88462b985910800000000000000
-      internalID: 1826380237626979740
+      spriteID: 38a28a9a581c2c1b0800000000000000
+      internalID: -5637731003693258109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drop_5
+      name: Claws_5
       rect:
         serializedVersion: 2
-        x: 2689
-        y: 67
-        width: 1436
-        height: 2084
+        x: 62
+        y: 2
+        width: 49
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c15502a046531a00800000000000000
-      internalID: 726018800532935108
+      spriteID: d5dc6ec6350e12630800000000000000
+      internalID: 3900645401193532765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drop_6
+      name: Claws_6
       rect:
         serializedVersion: 2
-        x: 4572
-        y: 67
-        width: 1433
-        height: 2084
+        x: 118
+        y: 2
+        width: 50
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,34 +252,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d4ca9a43c5f735b0800000000000000
-      internalID: -5388568210006424365
+      spriteID: 1c802c14a3530fdd0800000000000000
+      internalID: -2454403272589309759
       vertices: []
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: drop_7
-      rect:
-        serializedVersion: 2
-        x: 6336
-        y: 67
-        width: 1433
-        height: 2084
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0122a8494a15dbf30800000000000000
-      internalID: 4592916962296341008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-
     outline: []
     physicsShape: []
     bones: []
