@@ -1,7 +1,73 @@
 fileFormatVersion: 2
-guid: b5b106bfb05c3da4eae1c880c264f50f
+guid: 876b27b1e6f5b9d428865de5c7a6ef51
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3339416661103012892
+    second: MinerCheer_0
+  - first:
+      213: 6828449351225174295
+    second: MinerCheer_1
+  - first:
+      213: -2232159466264839947
+    second: MinerCheer_2
+  - first:
+      213: 5237423697690403635
+    second: MinerCheer_3
+  - first:
+      213: 5141996597154314199
+    second: MinerCheer_4
+  - first:
+      213: -5032654317951981626
+    second: MinerCheer_5
+  - first:
+      213: 45859628167961213
+    second: MinerCheer_6
+  - first:
+      213: -6179885675114729540
+    second: MinerCheer_7
+  - first:
+      213: 4688744171234198767
+    second: MinerCheer_8
+  - first:
+      213: -4298981218433144505
+    second: MinerCheer_9
+  - first:
+      213: -3391751237501017403
+    second: MinerCheer_10
+  - first:
+      213: -3075116507863736307
+    second: MinerCheer_11
+  - first:
+      213: -917173291984039052
+    second: MinerCheer_12
+  - first:
+      213: -7946764616484260390
+    second: MinerCheer_13
+  - first:
+      213: -9047214985295240568
+    second: MinerCheer_14
+  - first:
+      213: 8231380411451677950
+    second: MinerCheer_15
+  - first:
+      213: -1825628645365337051
+    second: MinerCheer_16
+  - first:
+      213: -5441633524237497736
+    second: MinerCheer_17
+  - first:
+      213: -6282164937956567657
+    second: MinerCheer_18
+  - first:
+      213: -8309705434678222435
+    second: MinerCheer_19
+  - first:
+      213: 9218024882531361939
+    second: MinerCheer_20
+  - first:
+      213: -1265375219788719093
+    second: MinerCheer_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +107,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 550
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +141,483 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MinerCheer_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 4742
+        width: 1442
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ce012a2cdf75e20800000000000000
+      internalID: 3339416661103012892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_1
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 4742
+        width: 1442
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719e58a918683ce50800000000000000
+      internalID: 6828449351225174295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_2
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 4742
+        width: 1442
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8324bbac6c501e0800000000000000
+      internalID: -2232159466264839947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_3
+      rect:
+        serializedVersion: 2
+        x: 5020
+        y: 4742
+        width: 1442
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333ac0f9a111fa840800000000000000
+      internalID: 5237423697690403635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_4
+      rect:
+        serializedVersion: 2
+        x: 6681
+        y: 4742
+        width: 1469
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d776a169aa0c5740800000000000000
+      internalID: 5141996597154314199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_5
+      rect:
+        serializedVersion: 2
+        x: 8504
+        y: 4742
+        width: 1505
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7e22ddf8b682ab0800000000000000
+      internalID: -5032654317951981626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_6
+      rect:
+        serializedVersion: 2
+        x: 10405
+        y: 4742
+        width: 1490
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a9b7eb61de2a000800000000000000
+      internalID: 45859628167961213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_7
+      rect:
+        serializedVersion: 2
+        x: 12397
+        y: 4742
+        width: 1463
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfe24e88b2ac3aa0800000000000000
+      internalID: -6179885675114729540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_8
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 2532
+        width: 1442
+        height: 2090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe409115bf3c11140800000000000000
+      internalID: 4688744171234198767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_9
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 2532
+        width: 1463
+        height: 2090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749673bdb53f654c0800000000000000
+      internalID: -4298981218433144505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_10
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 2532
+        width: 1491
+        height: 2090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2a24248341ee0d0800000000000000
+      internalID: -3391751237501017403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_11
+      rect:
+        serializedVersion: 2
+        x: 5020
+        y: 2567
+        width: 1491
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00a7d924ddf255d0800000000000000
+      internalID: -3075116507863736307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_12
+      rect:
+        serializedVersion: 2
+        x: 6759
+        y: 2567
+        width: 1462
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473d0d510cb8543f0800000000000000
+      internalID: -917173291984039052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_13
+      rect:
+        serializedVersion: 2
+        x: 8567
+        y: 2567
+        width: 1442
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5ffc06fab67b190800000000000000
+      internalID: -7946764616484260390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_14
+      rect:
+        serializedVersion: 2
+        x: 10405
+        y: 2567
+        width: 1462
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882e2e2b7e5d17280800000000000000
+      internalID: -9047214985295240568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_15
+      rect:
+        serializedVersion: 2
+        x: 12397
+        y: 2567
+        width: 1491
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc9fab5fdcbb3270800000000000000
+      internalID: 8231380411451677950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_16
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 194
+        width: 1505
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524b83d6b601aa6e0800000000000000
+      internalID: -1825628645365337051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_17
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 194
+        width: 1470
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a87f5042f6b74b0800000000000000
+      internalID: -5441633524237497736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_18
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 194
+        width: 1442
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7955fa4f54441d8a0800000000000000
+      internalID: -6282164937956567657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_19
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 194
+        width: 1441
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d912fd11feefdac80800000000000000
+      internalID: -8309705434678222435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_20
+      rect:
+        serializedVersion: 2
+        x: 6759
+        y: 194
+        width: 1441
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3946efd9ac00def70800000000000000
+      internalID: 9218024882531361939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinerCheer_21
+      rect:
+        serializedVersion: 2
+        x: 8454
+        y: 194
+        width: 1441
+        height: 2091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c59ec11fb707ee0800000000000000
+      internalID: -1265375219788719093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

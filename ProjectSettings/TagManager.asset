@@ -4,8 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+
   - Miner
   - HookSwing
+
+  - CurrentMoney
+  - TargetMoney
+  - CountdownTimer
+  - Clock
+
   layers:
   - Default
   - TransparentFX
@@ -40,6 +47,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3819399455
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Platform
+    uniqueID: 2343322649
     locked: 0
