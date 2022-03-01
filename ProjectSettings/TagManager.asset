@@ -10,6 +10,7 @@ TagManager:
   - Miner
   - HookSwing
   - CanvasPause
+  - LevelDetail
   layers:
   - Default
   - TransparentFX
