@@ -31,7 +31,7 @@ public class LevelDataManagement
             }
         }
     }
-    public int Level { get; set; } = 0;
+    public int Level { get; set; } = 1;
     public int Target { get; set; } = 0;
     public int Current { get; set; } = 0;
     public bool CanContinue { get; set; } = true;
