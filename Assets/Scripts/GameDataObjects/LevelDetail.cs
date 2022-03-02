@@ -8,4 +8,6 @@ public class LevelDetail
 {
     public int Level { get; set; }
     public int Target { get; set; }
+
+    public List<Treasure> treasure { get; set; }
 }
