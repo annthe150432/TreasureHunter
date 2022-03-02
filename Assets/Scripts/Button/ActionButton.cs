@@ -22,7 +22,7 @@ public class ActionButton : MonoBehaviour
 
     public void SkipGame()
     {
-
+        SceneManager.LoadScene("ShopScene");
     }
 
     public void RestartCurrent()
@@ -55,9 +55,13 @@ public class ActionButton : MonoBehaviour
         SceneManager.LoadScene("BaseScene");
     }
 
-    public void Buy()
+    public void SpendMoney(int spend)
     {
-        SceneManager.LoadScene("ResultScene");
+        if (spend > LevelDataManagement.Instance.Current)
+        {
+            return;
+        }
+        LevelDataManagement.Instance.UpdateLevelData(current: LevelDataManagement.Instance.Current - spend);
     }
 
 }

@@ -11,6 +11,7 @@ TagManager:
   - HookSwing
   - CanvasPause
   - LevelDetail
+  - Button
   layers:
   - Default
   - TransparentFX

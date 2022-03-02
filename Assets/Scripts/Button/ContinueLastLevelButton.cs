@@ -8,8 +8,11 @@ public class ContinueLastLevelButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LevelDataManagement data = LevelDataManagement.Instance;
-        if (!data.CanContinue)
+        if (LevelDataManagement.Instance.CanContinue)
+        {
+            gameObject.GetComponent<Button>().interactable = true;
+        }
+        else
         {
             gameObject.GetComponent<Button>().interactable = false;
         }

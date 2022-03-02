@@ -32,11 +32,13 @@ public class LevelDataManagement
             }
         }
     }
-    public int Level { get; set; } = 1;
+    public int Level { get; set; } = 0;
     public int Target { get; set; } = 0;
-    public int Current { get; set; } = 0;
+    public int Current { get; set; } = 1500;
+    public int DynamiteCount { get; set; } = 0;
     public bool CanContinue { get; set; } = false;
     public bool NextLevel { get; set; } = true;
+    private const int totalDynamite = 5;
 
     public SaveData saveData;
     public void UpdateLevelData(int level = -1, int current = -1)
@@ -67,6 +69,24 @@ public class LevelDataManagement
         if (CanContinue)
         {
             UpdateLevelData(level: saveData.Level, current: saveData.Current);
+        }
+    }
+
+    public void UpdateDynamiteCount(bool added)
+    {
+        if (added)
+        {
+            if (DynamiteCount < totalDynamite)
+            {
+                DynamiteCount++;
+            }
+        }
+        else
+        {
+            if (DynamiteCount > 0)
+            {
+                DynamiteCount--;
+            }
         }
     }
 
