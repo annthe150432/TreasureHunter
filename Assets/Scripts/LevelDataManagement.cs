@@ -22,6 +22,7 @@ public class LevelDataManagement
                     try
                     {
                         SaveData saveData = DataManagement<SaveData>.ReadDataFromFile("savegame", true);
+                        if (saveData != null) instance.CanContinue = true;
                     }
                     catch (FileNotFoundException) {
                         instance.CanContinue = false;
@@ -34,7 +35,8 @@ public class LevelDataManagement
     public int Level { get; set; } = 0;
     public int Target { get; set; } = 0;
     public int Current { get; set; } = 0;
-    public bool CanContinue { get; set; } = true;
+    public bool CanContinue { get; set; } = false;
+    public bool NextLevel { get; set; } = true;
 
     public SaveData saveData;
     public void UpdateLevelData(int level = -1, int current = -1)
@@ -44,7 +46,16 @@ public class LevelDataManagement
             List<LevelDetail> levelDetails = DataManagement<List<LevelDetail>>.ReadDataFromFile("leveldetails", false);
             Level = level;
             LevelDetail detail = levelDetails.Find(lv => lv.Level == Level);
-            if (detail != null) Target = detail.Target;
+            if (detail != null)
+            {
+                Target = detail.Target;
+            }
+            else
+            {
+                Level = 0;
+                Target = 0;
+            }
+            NextLevel = levelDetails.Find(lv => lv.Level == Level + 1) != null;
         }
         if (current != -1)
         {

@@ -13,9 +13,10 @@ public class ClockHandler : MonoBehaviour
     void Start()
     {
         countdownTimer = gameObject.AddComponent<CountdownTimer>();
-        countdownTimer.Duration = 90;
+        countdownTimer.Duration = 5;
         countdownTimer.Run();
         text = gameObject.GetComponent<Text>();
+        CurrentLevel = LevelDataManagement.Instance.Level;
     }
 
     // Update is called once per frame
@@ -40,7 +41,15 @@ public class ClockHandler : MonoBehaviour
             else
             {
                 DataManagement<SaveData>.DumpDataToFile("data", new SaveData { Level = CurrentLevel, Current = current });
-                SceneManager.LoadScene("ShopScene");
+                LevelDataManagement.Instance.UpdateLevelData(level: CurrentLevel, current: current);
+                if (LevelDataManagement.Instance.NextLevel)
+                {
+                    SceneManager.LoadScene("ShopScene");
+                }
+                else
+                {
+                    SceneManager.LoadScene("ResultScene");
+                }
             }
         }
     }

@@ -11,25 +11,39 @@ public class DataManagement<T>
 {
     public static T ReadDataFromFile(string filename, bool isSavedGame)
     {
-        filename = filename + ".json";
-        string path = Path.Combine(Application.dataPath, @"data/", filename);
-        if (isSavedGame) path = Path.Combine(Application.persistentDataPath, @"data/", filename);
-        Debug.Log(path);
-        if (!File.Exists(path))
+        string content = "";
+        string datafolder = @"data/";
+        if (isSavedGame)
         {
-            throw new FileNotFoundException("Not found " + path);
+            filename = filename + ".json";
+            String path = Path.Combine(Application.persistentDataPath, datafolder, filename);
+            Debug.Log(path);
+            if (!File.Exists(path))
+            {
+                throw new FileNotFoundException("Not found " + path);
+            }
+            content = File.ReadAllText(path);
         }
-        string fileContent = File.ReadAllText(path);
-        T data = JsonConvert.DeserializeObject<T>(fileContent);
+        else
+        {
+            TextAsset file = Resources.Load(datafolder + filename) as TextAsset;
+            content = file.text;
+        }
+        
+        T data = JsonConvert.DeserializeObject<T>(content);
         return data;
     }
 
     public static void DumpDataToFile(string filename, T data)
     {
         filename = filename + ".json";
-        string path = Path.Combine(Application.persistentDataPath, @"data/", filename);
+        string path = Path.Combine(Application.persistentDataPath, @"data/");
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+        path = Path.Combine(path, filename);
         string fileContent = JsonConvert.SerializeObject(data);
-        FileStream fs = new FileStream(path, FileMode.Create);
         File.WriteAllText(path, fileContent);
     }
 
@@ -44,4 +58,3 @@ public class DataManagement<T>
         File.Delete(path);
     }
 }
-

@@ -25,33 +25,39 @@ public class ActionButton : MonoBehaviour
 
     }
 
-    public void RestartGame()
+    public void RestartCurrent()
     {
         SceneManager.LoadScene("BaseScene");
     }
 
     public void QuitGame()
     {
-
+        Application.Quit();
     }
 
     public void NewLevel()
     {
-        LevelDataManagement data = LevelDataManagement.Instance;
-        LevelDataManagement.Instance.UpdateLevelData(level: data.Level + 1, current: data.Current);
+        LevelDataManagement.Instance.UpdateLevelData(level: LevelDataManagement.Instance.Level + 1, current: LevelDataManagement.Instance.Current);
         SceneManager.LoadScene("BaseScene");
+    }
+
+    public void RestartAll()
+    {
+        DataManagement<SaveData>.DeleteSaveFile("savegame");
+        LevelDataManagement.Instance.UpdateLevelData(level: 0, current: 0);
+        SceneManager.LoadScene("HomeScene");
     }
 
     public void ContinueFromLastSave()
     {
         LevelDataManagement data = LevelDataManagement.Instance;
-        LevelDataManagement.Instance.UpdateLevelData(level: data.Level + 1, current: data.Current);
+        LevelDataManagement.Instance.UpdateLevelData(level: data.Level, current: data.Current);
         SceneManager.LoadScene("BaseScene");
     }
 
     public void Buy()
     {
-
+        SceneManager.LoadScene("ResultScene");
     }
 
 }
