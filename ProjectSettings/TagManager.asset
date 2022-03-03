@@ -12,6 +12,8 @@ TagManager:
   - CanvasPause
   - LevelDetail
   - Button
+  - Victory
+  - Lose
   layers:
   - Default
   - TransparentFX
