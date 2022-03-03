@@ -37,6 +37,10 @@ public class LevelDataManagement
     public int Target { get; set; } = 0;
     public int Current { get; set; } = 50000;
     public int DynamiteCount { get; set; } = 0;
+    public float AddedTime { get; set; } = 0;
+    public bool DoubleStoneValue { get; set; } = false;
+    public bool AddDiamondValue { get; set; } = false;
+    public bool AddPullForce { get; set; } = false;
     public bool CanContinue { get; set; } = false;
     public bool NextLevel { get; set; } = true;
     private const int totalDynamite = 5;
@@ -50,7 +54,7 @@ public class LevelDataManagement
         {
             List<LevelDetail> levelDetails = DataManagement<List<LevelDetail>>.ReadDataFromFile("leveldetails", false);
             Level = level;
-            Target = BaseTarget * (2 * (Level - 1) * (Level - 1) + 2 * (Level - 1) + 1);
+            Target = BaseTarget * (3*(Level - 1)/2 * (Level - 1) + (Level - 1) + 1);
             if (levelDetails.Find(lv => lv.Level == level) == null)
             {
                 Level = 0;
@@ -96,6 +100,7 @@ public class LevelDataManagement
         saveData.Level = Level;
         DataManagement<SaveData>.DumpDataToFile(saveGameFileName, saveData);
         this.saveData = saveData;
+        this.CanContinue = true;
     }
 
 }

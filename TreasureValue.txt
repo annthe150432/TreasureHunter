@@ -2,12 +2,10 @@ Chest1OpenEmpty: 2
 Chest1OpenValue1: 250
 Chest1OpenValue2: 550
 
-
 Diamond1: 600
 Diamond2: 650
 Diamond3: 700
 Diamond4: 750
-
 
 Barrel: 2
 
@@ -20,7 +18,6 @@ MoleDiamond1: 602
 MoleDiamond2: 652
 MoleDiamond3: 702
 MoleDiamond4: 752
-
 
 StoneBig: 50
 StoneMedium: 20

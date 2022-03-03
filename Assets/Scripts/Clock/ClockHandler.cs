@@ -17,6 +17,7 @@ public class ClockHandler : MonoBehaviour
         countdownTimer.Run();
         text = gameObject.GetComponent<Text>();
         CurrentLevel = LevelDataManagement.Instance.Level;
+        LevelDataManagement.Instance.UpdateSaveData();
     }
 
     // Update is called once per frame
@@ -42,6 +43,10 @@ public class ClockHandler : MonoBehaviour
             {
                 DataManagement<SaveData>.DumpDataToFile("data", new SaveData { Level = CurrentLevel, Current = current });
                 LevelDataManagement.Instance.UpdateLevelData(level: CurrentLevel, current: current);
+                LevelDataManagement.Instance.AddedTime = 0;
+                LevelDataManagement.Instance.AddDiamondValue = false;
+                LevelDataManagement.Instance.AddPullForce = false;
+                LevelDataManagement.Instance.DoubleStoneValue = false;
                 if (LevelDataManagement.Instance.NextLevel)
                 {
                     SceneManager.LoadScene("ShopScene");

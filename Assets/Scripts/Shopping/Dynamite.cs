@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Dynamite : MonoBehaviour
+public class Dynamite : ShopItem
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.Start();
+        gameObject.GetComponent<Button>().onClick.AddListener(delegate { LevelDataManagement.Instance.UpdateDynamiteCount(true); });
+        gameObject.GetComponent<Button>().onClick.AddListener(delegate { Destroy(gameObject); });
     }
 }

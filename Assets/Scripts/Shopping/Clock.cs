@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Clock : MonoBehaviour
+public class Clock : ShopItem
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
+        gameObject.GetComponent<Button>().onClick.AddListener(AddTime);
+        gameObject.GetComponent<Button>().onClick.AddListener(delegate { Destroy(gameObject); });
     }
-
-    // Update is called once per frame
-    void Update()
+    void AddTime()
     {
-        
+        LevelDataManagement.Instance.AddedTime = 10;
     }
 }

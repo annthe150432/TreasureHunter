@@ -14,6 +14,7 @@ TagManager:
   - Button
   - Victory
   - Lose
+  - Price
   layers:
   - Default
   - TransparentFX

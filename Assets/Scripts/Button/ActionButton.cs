@@ -45,6 +45,12 @@ public class ActionButton : MonoBehaviour
     {
         DataManagement<SaveData>.DeleteSaveFile("savegame");
         LevelDataManagement.Instance.UpdateLevelData(level: 0, current: 0);
+        LevelDataManagement.Instance.CanContinue = false;
+        LevelDataManagement.Instance.AddedTime = 0;
+        LevelDataManagement.Instance.AddDiamondValue = false;
+        LevelDataManagement.Instance.AddPullForce = false;
+        LevelDataManagement.Instance.DoubleStoneValue = false;
+        LevelDataManagement.Instance.DynamiteCount = 0;
         SceneManager.LoadScene("HomeScene");
     }
 
@@ -53,15 +59,6 @@ public class ActionButton : MonoBehaviour
         LevelDataManagement data = LevelDataManagement.Instance;
         LevelDataManagement.Instance.UpdateLevelData(level: data.Level, current: data.Current);
         SceneManager.LoadScene("BaseScene");
-    }
-
-    public void SpendMoney(int spend)
-    {
-        if (spend > LevelDataManagement.Instance.Current)
-        {
-            return;
-        }
-        LevelDataManagement.Instance.UpdateLevelData(current: LevelDataManagement.Instance.Current - spend);
     }
 
 }

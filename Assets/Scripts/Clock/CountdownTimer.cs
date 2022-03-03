@@ -5,11 +5,11 @@ using UnityEngine;
 public class CountdownTimer : Timer
 {
     public const float BaseDuration = 5;
-    public float AddedDuration { get; set; } = 5;
+    public float AddedDuration { get; set; } = 0;
 
-    private void Start()
+    private void Awake()
     {
-        AddDuration();
+        AddedDuration = LevelDataManagement.Instance.AddedTime;
     }
     protected override void Update()
     {
