@@ -9,10 +9,10 @@ using UnityEngine;
 
 public class DataManagement<T>
 {
+    public static string datafolder = @"data/";
     public static T ReadDataFromFile(string filename, bool isSavedGame)
     {
         string content = "";
-        string datafolder = @"data/";
         if (isSavedGame)
         {
             filename = filename + ".json";
@@ -37,7 +37,7 @@ public class DataManagement<T>
     public static void DumpDataToFile(string filename, T data)
     {
         filename = filename + ".json";
-        string path = Path.Combine(Application.persistentDataPath, @"data/");
+        string path = Path.Combine(Application.persistentDataPath, datafolder);
         if (!Directory.Exists(path))
         {
             Directory.CreateDirectory(path);
@@ -50,7 +50,7 @@ public class DataManagement<T>
     public static void DeleteSaveFile(string filename)
     {
         filename = filename + ".json";
-        String path = Path.Combine(Application.persistentDataPath, @"data/", filename);
+        String path = Path.Combine(Application.persistentDataPath, datafolder, filename);
         if (!File.Exists(path))
         {
             return;

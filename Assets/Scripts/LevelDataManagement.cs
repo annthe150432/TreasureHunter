@@ -21,8 +21,9 @@ public class LevelDataManagement
                     instance = new LevelDataManagement();
                     try
                     {
-                        SaveData saveData = DataManagement<SaveData>.ReadDataFromFile("savegame", true);
+                        SaveData saveData = DataManagement<SaveData>.ReadDataFromFile(saveGameFileName, true);
                         if (saveData != null) instance.CanContinue = true;
+                        instance.saveData = saveData;
                     }
                     catch (FileNotFoundException) {
                         instance.CanContinue = false;
@@ -34,11 +35,13 @@ public class LevelDataManagement
     }
     public int Level { get; set; } = 0;
     public int Target { get; set; } = 0;
-    public int Current { get; set; } = 1500;
+    public int Current { get; set; } = 50000;
     public int DynamiteCount { get; set; } = 0;
     public bool CanContinue { get; set; } = false;
     public bool NextLevel { get; set; } = true;
     private const int totalDynamite = 5;
+    private const int BaseTarget = 650;
+    private const string saveGameFileName = "savegame";
 
     public SaveData saveData;
     public void UpdateLevelData(int level = -1, int current = -1)
@@ -47,12 +50,8 @@ public class LevelDataManagement
         {
             List<LevelDetail> levelDetails = DataManagement<List<LevelDetail>>.ReadDataFromFile("leveldetails", false);
             Level = level;
-            LevelDetail detail = levelDetails.Find(lv => lv.Level == Level);
-            if (detail != null)
-            {
-                Target = detail.Target;
-            }
-            else
+            Target = BaseTarget * (2 * (Level - 1) * (Level - 1) + 2 * (Level - 1) + 1);
+            if (levelDetails.Find(lv => lv.Level == level) == null)
             {
                 Level = 0;
                 Target = 0;
@@ -88,6 +87,15 @@ public class LevelDataManagement
                 DynamiteCount--;
             }
         }
+    }
+
+    public void UpdateSaveData()
+    {
+        SaveData saveData = new SaveData();
+        saveData.Current = Current;
+        saveData.Level = Level;
+        DataManagement<SaveData>.DumpDataToFile(saveGameFileName, saveData);
+        this.saveData = saveData;
     }
 
 }
