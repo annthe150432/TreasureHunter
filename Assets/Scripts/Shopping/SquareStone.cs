@@ -8,8 +8,12 @@ public class SquareStone : ShopItem
     protected override void Start()
     {
         base.Start();
-        gameObject.GetComponent<Button>().onClick.AddListener(DoubleStoneValue);
-        gameObject.GetComponent<Button>().onClick.AddListener(delegate { Destroy(gameObject); });
+        if (Buyable())
+        {
+            gameObject.GetComponent<Button>().onClick.AddListener(delegate { SpendMoney(Value); });
+            gameObject.GetComponent<Button>().onClick.AddListener(DoubleStoneValue);
+            gameObject.GetComponent<Button>().onClick.AddListener(delegate { Destroy(gameObject); });
+        }
     }
     void DoubleStoneValue()
     {

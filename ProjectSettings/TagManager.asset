@@ -12,8 +12,6 @@ TagManager:
   - CanvasPause
   - LevelDetail
   - Button
-  - Victory
-  - Lose
   - Price
   layers:
   - Default

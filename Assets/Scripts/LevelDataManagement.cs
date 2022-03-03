@@ -35,7 +35,7 @@ public class LevelDataManagement
     }
     public int Level { get; set; } = 0;
     public int Target { get; set; } = 0;
-    public int Current { get; set; } = 50000;
+    public int Current { get; set; } = 0;
     public int DynamiteCount { get; set; } = 0;
     public float AddedTime { get; set; } = 0;
     public bool DoubleStoneValue { get; set; } = false;

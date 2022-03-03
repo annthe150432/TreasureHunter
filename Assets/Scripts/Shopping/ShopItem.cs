@@ -13,7 +13,6 @@ public class ShopItem : MonoBehaviour
         GameObject PriceText = gameObject.transform.GetChild(0).gameObject;
         Text text = PriceText.GetComponent<Text>();
         text.text = Value.ToString();
-        gameObject.GetComponent<Button>().onClick.AddListener(delegate { SpendMoney(Value); });
     }
 
     public void SpendMoney(int spend)
@@ -26,5 +25,9 @@ public class ShopItem : MonoBehaviour
         GameObject currentMoneyGO = GameObject.FindGameObjectWithTag("CurrentMoney");
         Text moneyText = currentMoneyGO.GetComponent<Text>();
         moneyText.text = LevelDataManagement.Instance.Current.ToString();
+    }
+    public bool Buyable()
+    {
+        return Value <= LevelDataManagement.Instance.Current;
     }
 }
