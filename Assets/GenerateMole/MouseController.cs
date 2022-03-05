@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GenerateTreasure
+namespace Mouse
 {
-
     public class MouseController : MonoBehaviour
     {
         public enum State
         {
-           Idle,
-           Walk,
-        } 
+            Idle,
+            Walk,
+        }
 
 
         [SerializeField] private Animator m_Animator;
@@ -35,33 +34,31 @@ namespace GenerateTreasure
             SetState(State.Idle);
             SetDirection(1);
             StartCoroutine(UpdateAI());
-           
         }
 
-          private void OnDrawGizmos()
-         {
-           Gizmos.color = Color.yellow;
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.yellow;
             if (!Application.isPlaying)
                 m_StartPosition = transform.position;
-           Gizmos.DrawLine(new Vector2(m_StartPosition.x - m_WalkDistance, m_StartPosition.y),
-              new Vector2(m_StartPosition.x + m_WalkDistance, m_StartPosition.y));
-         }
+            Gizmos.DrawLine(new Vector2(m_StartPosition.x - m_WalkDistance, m_StartPosition.y),
+               new Vector2(m_StartPosition.x + m_WalkDistance, m_StartPosition.y));
+        }
 
-           
+
         private IEnumerator UpdateAI()
-           {
+        {
             while (true)
             {
                 if (m_CurrentState == State.Idle)
                 {
-                    yield return new WaitForSeconds(3f);
+                    yield return new WaitForSeconds(1f);
                     SetState(State.Walk);
                 }
                 else if (m_CurrentState == State.Walk)
                 {
                     float distance = Vector2.Distance(m_StartPosition, transform.position);
-                    Debug.Log(distance);
-                    if (distance > m_WalkDistance)
+                    if (distance < m_WalkDistance)
                     {
                         if (transform.position.x > m_StartPosition.x && m_Direction == 1)
                         {
@@ -75,21 +72,20 @@ namespace GenerateTreasure
                             PlayIdleAnimation();
                             yield return new WaitForSeconds(1f);
                             PlayWalkAnimation();
-                            SetDirection(1);
-                        }                        
+                           SetDirection(1);
+                        }
                         m_Rigidbody2D.velocity = new Vector2(m_WalkSpeed * m_Direction, m_Rigidbody2D.velocity.y);
                     }
-
                 }
                 yield return null;
             }
-          }
+        }
 
-          private void SetDirection(int direction)
-         {
-              m_Direction = direction;
-              transform.localScale = new Vector3(-m_Direction, 1, 1);
-         }
+        private void SetDirection(int direction)
+        {
+           m_Direction = direction;
+           transform.localScale = new Vector3(-m_Direction, 1, 1);
+        }
 
         private void SetState(State state)
         {
@@ -104,7 +100,7 @@ namespace GenerateTreasure
                     PlayWalkAnimation();
                     break;
             }
-          }
+        }
 
         [ContextMenu("Play Idle Animation")]
         private void PlayIdleAnimation()
