@@ -20,8 +20,18 @@ public class Hook : MonoBehaviour
     private float initialY;
 
     private bool moveDown;
+    private float _slowDown;
+
+    private Transform rod;
+    private bool flagRod;
+    private int dollar;
 
     private RopeRenderer ropeRenderer;
+
+    internal void OnTriggerEnter(Collider collision)
+    {
+        throw new NotImplementedException();
+    }
 
     void Awake()
     {
@@ -35,6 +45,8 @@ public class Hook : MonoBehaviour
         initialY = transform.position.y;
         initialMoveSpeed = moveSpeed;
         canRotate = true;
+        _slowDown = 0;
+        flagRod = false;
     }
 
     // Update is called once per frame
@@ -43,7 +55,16 @@ public class Hook : MonoBehaviour
         Rotate();
         GetInput();
         MoveRope();
+        Grabbing();
     }
+
+    private void Grabbing()
+    {
+
+
+    }
+
+
 
     // Do rotation of hook when not drop down
     private void Rotate()
@@ -59,7 +80,7 @@ public class Hook : MonoBehaviour
         }
         else
         {
-            rotateAngle -= rotateSpeed * Time.deltaTime;            
+            rotateAngle -= rotateSpeed * Time.deltaTime;
         }
 
         transform.rotation = Quaternion.AngleAxis(rotateAngle, Vector3.forward);
@@ -106,11 +127,13 @@ public class Hook : MonoBehaviour
             {
                 // move hook down
                 temp -= transform.up * Time.deltaTime * moveSpeed;
+
             }
             else
             {
                 // move hook up
-                temp += transform.up * Time.deltaTime * moveSpeed;
+                temp += transform.up * Time.deltaTime * (moveSpeed - _slowDown);
+
             }
             transform.position = temp;
 
@@ -126,9 +149,32 @@ public class Hook : MonoBehaviour
                 canRotate = true;
                 ropeRenderer.RenderLine(temp, false);
                 moveSpeed = initialMoveSpeed;
+                if (rod != null)
+                {
+                    Destroy(rod.gameObject);
+                    _slowDown = 0;
+                    flagRod = false;
+                }
+
             }
             ropeRenderer.RenderLine(temp, true);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!flagRod)
+        {
+            rod = collision.transform;
+            _slowDown = rod.GetComponent<Rod>().slowDown;
+            dollar = rod.GetComponent<Rod>().value;
+            moveDown = false;
+            rod.SetParent(transform);
+            flagRod = true;
+            
+        }
+    }
+
+
 
 }

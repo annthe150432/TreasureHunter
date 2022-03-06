@@ -10,6 +10,8 @@ TagManager:
   - Miner
   - HookSwing
   - CanvasPause
+  - Gold
+  - Rock
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Rope Trail
   - 
   - 
   - 
@@ -55,4 +57,7 @@ TagManager:
     locked: 0
   - name: Platform
     uniqueID: 2748498793
+    locked: 0
+  - name: RopeTrail
+    uniqueID: 2682345069
     locked: 0
