@@ -12,6 +12,9 @@ TagManager:
   - CanvasPause
   - Gold
   - Rock
+  - LevelDetail
+  - Button
+  - Price
   layers:
   - Default
   - TransparentFX

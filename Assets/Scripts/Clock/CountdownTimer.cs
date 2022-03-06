@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class CountdownTimer : Timer
 {
-    // Update is called once per frame
+    public const float BaseDuration = 5;
+    public float AddedDuration { get; set; } = 0;
+
+    private void Awake()
+    {
+        AddedDuration = LevelDataManagement.Instance.AddedTime;
+    }
     protected override void Update()
     {
 		// update timer and check for finished
@@ -17,4 +23,9 @@ public class CountdownTimer : Timer
             }
 		}
 	}
+
+    public void AddDuration()
+    {
+        Duration = BaseDuration + AddedDuration;
+    }
 }

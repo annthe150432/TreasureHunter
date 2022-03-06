@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class ActionButton : MonoBehaviour
 {
-
     public void PauseGame()
     {
         Time.timeScale = 0;
@@ -21,8 +20,45 @@ public class ActionButton : MonoBehaviour
         canvas.GetComponent<Canvas>().sortingOrder = 0;
     }
 
-    void SkipGame()
+    public void SkipGame()
     {
-
+        SceneManager.LoadScene("ShopScene");
     }
+
+    public void RestartCurrent()
+    {
+        SceneManager.LoadScene("BaseScene");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void NewLevel()
+    {
+        LevelDataManagement.Instance.UpdateLevelData(level: LevelDataManagement.Instance.Level + 1, current: LevelDataManagement.Instance.Current);
+        SceneManager.LoadScene("BaseScene");
+    }
+
+    public void RestartAll()
+    {
+        DataManagement<SaveData>.DeleteSaveFile("savegame");
+        LevelDataManagement.Instance.UpdateLevelData(level: 0, current: 0);
+        LevelDataManagement.Instance.CanContinue = false;
+        LevelDataManagement.Instance.AddedTime = 0;
+        LevelDataManagement.Instance.AddDiamondValue = false;
+        LevelDataManagement.Instance.AddPullForce = false;
+        LevelDataManagement.Instance.DoubleStoneValue = false;
+        LevelDataManagement.Instance.DynamiteCount = 0;
+        SceneManager.LoadScene("HomeScene");
+    }
+
+    public void ContinueFromLastSave()
+    {
+        LevelDataManagement data = LevelDataManagement.Instance;
+        LevelDataManagement.Instance.UpdateLevelData(level: data.Level, current: data.Current);
+        SceneManager.LoadScene("BaseScene");
+    }
+
 }

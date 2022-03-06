@@ -1,22 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CurrentPointHandler : MonoBehaviour
 {
-    Point point;
-    bool addPoint = false;
-    public int TargetPoint = 0;
-    // Start is called before the first frame update
     void Start()
     {
-        point = gameObject.AddComponent<Point>();
-        point.TargetPoint = TargetPoint;
+        Text value = GetComponent<Text>();
+        value.text = LevelDataManagement.Instance.Current.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        Text value = GetComponent<Text>();
+        LevelDataManagement.Instance.UpdateLevelData(current: int.Parse(value.text));
     }
 }
