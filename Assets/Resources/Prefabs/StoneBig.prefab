@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5437867515743525795}
   - component: {fileID: -8298725807717086776}
   - component: {fileID: -8279013751227347774}
+  - component: {fileID: 2278624550459078322}
   m_Layer: 0
   m_Name: StoneBig
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e48535feb3758847a1887aafb72ce68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 50
+  _tag: Rock
+  slowDown: 12
+  value: 0
 --- !u!50 &-8279013751227347774
 Rigidbody2D:
   serializedVersion: 4
@@ -118,3 +121,42 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &2278624550459078322
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5750054313065239641}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5625, y: 1.5625}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.703125, y: 0.03125}
+      - {x: 0.578125, y: 0.25}
+      - {x: 0.40625, y: 0.453125}
+      - {x: 0.3125, y: 0.5}
+      - {x: 0.203125, y: 0.5}
+      - {x: -0.34375, y: 0.4375}
+      - {x: -0.65625, y: 0.21875}
+      - {x: -0.78125, y: -0.03125}
+      - {x: -0.78125, y: -0.53125}
+      - {x: -0.578125, y: -0.640625}
+      - {x: 0.53125, y: -0.640625}
+      - {x: 0.609375, y: -0.609375}
+      - {x: 0.75, y: -0.4375}
+      - {x: 0.75, y: -0.171875}

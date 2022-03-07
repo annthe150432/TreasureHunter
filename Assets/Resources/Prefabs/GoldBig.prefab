@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4868131088522381465}
   - component: {fileID: 7174706571844677107}
   - component: {fileID: -4286112628219647535}
+  - component: {fileID: 108044982428654063}
   m_Layer: 0
   m_Name: GoldBig
-  m_TagString: Untagged
+  m_TagString: Gold
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e48535feb3758847a1887aafb72ce68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 500
+  _tag: Gold
+  slowDown: 12
+  value: 500
 --- !u!50 &-4286112628219647535
 Rigidbody2D:
   serializedVersion: 4
@@ -118,3 +121,44 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &108044982428654063
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6749741055811653807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.5, y: 2.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.95, y: 0.375}
+      - {x: 0.625, y: 0.65000004}
+      - {x: 0.25, y: 0.8}
+      - {x: -0.25, y: 0.8}
+      - {x: -0.45000002, y: 0.77500004}
+      - {x: -0.675, y: 0.625}
+      - {x: -1.025, y: 0.22500001}
+      - {x: -1.2, y: -0.2}
+      - {x: -1.2, y: -0.625}
+      - {x: -0.975, y: -0.95}
+      - {x: -0.65000004, y: -1.075}
+      - {x: -0.3, y: -1.075}
+      - {x: 0.15, y: -1.025}
+      - {x: 1, y: -0.975}
+      - {x: 1.1750001, y: -0.7}
+      - {x: 1.1750001, y: -0.1}

@@ -15,6 +15,9 @@ TagManager:
   - LevelDetail
   - Button
   - Price
+  - Diamond
+  - Mole
+  - MoleDiamond
   layers:
   - Default
   - TransparentFX
