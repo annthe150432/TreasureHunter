@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hook : MonoBehaviour
 {
@@ -26,6 +28,12 @@ public class Hook : MonoBehaviour
     private bool flagRod;
     private int dollar;
 
+    private int numBomb;
+    [SerializeField]
+    private GameObject dynamitePrefab;
+    private bool dynamiteThrow;
+    public bool DynamiteThrow { get { return dynamiteThrow; } set { dynamiteThrow = value; } }
+
     private RopeRenderer ropeRenderer;
 
     internal void OnTriggerEnter(Collider collision)
@@ -47,6 +55,11 @@ public class Hook : MonoBehaviour
         canRotate = true;
         _slowDown = 0;
         flagRod = false;
+        // should load from save
+        dollar = 0;
+        // should load from save
+        numBomb = 3;
+        dynamiteThrow = false;
     }
 
     // Update is called once per frame
@@ -55,16 +68,7 @@ public class Hook : MonoBehaviour
         Rotate();
         GetInput();
         MoveRope();
-        Grabbing();
     }
-
-    private void Grabbing()
-    {
-
-
-    }
-
-
 
     // Do rotation of hook when not drop down
     private void Rotate()
@@ -132,7 +136,42 @@ public class Hook : MonoBehaviour
             else
             {
                 // move hook up
-                temp += transform.up * Time.deltaTime * (moveSpeed - _slowDown);
+                if (flagRod)
+                {
+                    temp += transform.up * Time.deltaTime * (moveSpeed - _slowDown);
+                }
+                else
+                {
+                    temp += transform.up * Time.deltaTime * moveSpeed;
+                }
+
+                // while moving can throw bomb
+                // throw bomb
+                if (numBomb > 0)
+                {
+
+                    // only throw when there is something on hook
+                    if (rod != null)
+                    {
+                        // allow throw dynamite
+                        if (Input.GetKeyDown(KeyCode.Space))
+                        {
+                            Vector3 throwPos = transform.parent.position;
+                            GameObject throwDynamite = Instantiate<GameObject>(dynamitePrefab, throwPos, Quaternion.identity);
+                            throwDynamite.tag = "Dynamite";
+                            throwDynamite.AddComponent<IngameDynamite>();
+                            IngameDynamite throwDynamite_script = throwDynamite.GetComponent<IngameDynamite>();
+                            throwDynamite_script.Rod = rod;
+                            
+                        }
+                    }
+                    if (dynamiteThrow)
+                    {
+                        flagRod = false;
+
+                    }
+
+                }
 
             }
             transform.position = temp;
@@ -149,11 +188,26 @@ public class Hook : MonoBehaviour
                 canRotate = true;
                 ropeRenderer.RenderLine(temp, false);
                 moveSpeed = initialMoveSpeed;
+                dynamiteThrow = false;
+
+
                 if (rod != null)
                 {
+                    // remove rod from screen
                     Destroy(rod.gameObject);
                     _slowDown = 0;
                     flagRod = false;
+
+                    // add point
+                    GameObject point = GameObject.FindGameObjectWithTag("CurrentMoney");
+                    if (point != null)
+                    {
+                        Text value = point.GetComponent<Text>();
+                        int pointValue = value != null ? Int32.Parse(value.text) : 0;
+                        pointValue += dollar;
+                        value.text = pointValue.ToString();
+                        dollar = 0;
+                    }
                 }
 
             }
@@ -166,14 +220,17 @@ public class Hook : MonoBehaviour
         if (!flagRod)
         {
             rod = collision.transform;
+            dollar = rod.GetComponent<Rod>().value;
             _slowDown = rod.GetComponent<Rod>().slowDown;
             dollar = rod.GetComponent<Rod>().value;
             moveDown = false;
             rod.SetParent(transform);
             flagRod = true;
-            
+
         }
     }
+
+
 
 
 
