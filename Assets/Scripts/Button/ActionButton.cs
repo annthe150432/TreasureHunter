@@ -61,4 +61,9 @@ public class ActionButton : MonoBehaviour
         SceneManager.LoadScene("BaseScene");
     }
 
+    public void TestModifyClock()
+    {
+
+    }
+
 }

@@ -24,8 +24,8 @@ public class CountdownTimer : Timer
 		}
 	}
 
-    public void AddDuration()
+    public void AddDuration(float baseDuration)
     {
-        Duration = BaseDuration + AddedDuration;
+        Duration = baseDuration + AddedDuration;
     }
 }

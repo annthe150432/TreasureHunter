@@ -27,10 +27,7 @@ public class Timer : MonoBehaviour
         }
 		set
 		{
-			if (!running)
-			{
-				totalSeconds = value;
-			}
+			totalSeconds = value;
 		}
 	}
 
