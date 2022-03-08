@@ -7,6 +7,11 @@ using UnityEngine.UI;
 
 public class Hook : MonoBehaviour
 {
+    /// <summary>
+    /// To do:
+    /// Handle rest of items used: clock, diamond polisher, energy, square stone, hook mole
+    /// </summary>
+    
     public float rotateSpeed = 30f;
     public float maxZ = 55f;
     public float minZ = -55f;
@@ -58,7 +63,7 @@ public class Hook : MonoBehaviour
         // should load from save
         dollar = 0;
         // should load from save
-        numBomb = 3;
+        numBomb = LevelDataManagement.Instance.DynamiteCount;
         dynamiteThrow = false;
     }
 
@@ -167,8 +172,10 @@ public class Hook : MonoBehaviour
                     }
                     if (dynamiteThrow)
                     {
+                        //restore hook speed and hook status to unhooked
                         flagRod = false;
-
+                        // minus 1 dynamite
+                        LevelDataManagement.Instance.UpdateDynamiteCount(false);
                     }
 
                 }
@@ -219,10 +226,13 @@ public class Hook : MonoBehaviour
     {
         if (!flagRod)
         {
+            // get hooked object information
             rod = collision.transform;
             dollar = rod.GetComponent<Rod>().value;
             _slowDown = rod.GetComponent<Rod>().slowDown;
             dollar = rod.GetComponent<Rod>().value;
+
+            // change hook status
             moveDown = false;
             rod.SetParent(transform);
             flagRod = true;

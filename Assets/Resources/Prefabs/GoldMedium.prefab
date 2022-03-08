@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: Gold
   slowDown: 8
-  value: 200
+  value: 250
 --- !u!50 &1397209248929350063
 Rigidbody2D:
   serializedVersion: 4

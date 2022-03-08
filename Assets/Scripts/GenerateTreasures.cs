@@ -13,6 +13,10 @@ public class GenerateTreasures : MonoBehaviour
     {
         List<LevelDetail> levelDetails = DataManagement<List<LevelDetail>>.ReadDataFromFile("leveldetails", false);
         int level = LevelDataManagement.Instance.Level;
+        if(level == 1)
+        {
+            LevelDataManagement.Instance.DynamiteCount = 0;
+        }
         LevelDetail levell = levelDetails.Find(lv => lv.Level == level);
 
 

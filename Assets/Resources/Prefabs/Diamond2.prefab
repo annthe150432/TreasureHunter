@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: Diamond
   slowDown: 5
-  value: 200
+  value: 650
 --- !u!50 &3610933533155130655
 Rigidbody2D:
   serializedVersion: 4

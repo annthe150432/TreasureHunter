@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4641668172418138585}
   - component: {fileID: 4641668172418138591}
   - component: {fileID: 4641668172418138584}
+  - component: {fileID: 7017493807854479765}
   m_Layer: 0
   m_Name: Mole
   m_TagString: Mole
@@ -158,3 +159,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.34375
+--- !u!114 &7017493807854479765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4641668172418138597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e48535feb3758847a1887aafb72ce68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: Mole
+  slowDown: 5
+  value: 2

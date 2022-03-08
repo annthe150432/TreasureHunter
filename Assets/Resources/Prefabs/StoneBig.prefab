@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: Rock
   slowDown: 12
-  value: 0
+  value: 50
 --- !u!50 &-8279013751227347774
 Rigidbody2D:
   serializedVersion: 4
