@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreasureValue : MonoBehaviour
+public class TreasureValue : Rod
 {
-    public int Value = 0;
+    
 }

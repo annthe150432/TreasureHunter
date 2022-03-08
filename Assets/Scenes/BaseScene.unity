@@ -2417,8 +2417,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1666348493}
   - component: {fileID: 1666348496}
-  - component: {fileID: 1666348495}
-  - component: {fileID: 1666348494}
   m_Layer: 0
   m_Name: Hook
   m_TagString: HookSwing
@@ -2441,43 +2439,6 @@ Transform:
   m_Father: {fileID: 2107283024}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1666348494
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666348492}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!58 &1666348495
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666348492}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: -0.1}
-  serializedVersion: 2
-  m_Radius: 0.2
 --- !u!212 &1666348496
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2834,7 +2795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0044555664, y: -4.9599915}
+  m_AnchoredPosition: {x: -0.0044555664, y: -4.959961}
   m_SizeDelta: {x: 0, y: 9.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2065635984
@@ -2918,6 +2879,8 @@ GameObject:
   - component: {fileID: 2107283027}
   - component: {fileID: 2107283026}
   - component: {fileID: 2107283025}
+  - component: {fileID: 2107283029}
+  - component: {fileID: 2107283030}
   m_Layer: 0
   m_Name: HookParent
   m_TagString: Untagged
@@ -2968,8 +2931,8 @@ MonoBehaviour:
   rotateSpeed: 30
   maxZ: 55
   minZ: -55
-  moveSpeed: 20
-  minY: -2.5
+  moveSpeed: 15
+  minY: -6.5
 --- !u!120 &2107283027
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -3007,9 +2970,9 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1612622227
+  m_SortingLayer: 4
+  m_SortingOrder: 2
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
@@ -3119,3 +3082,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &2107283029
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107283023}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!60 &2107283030
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107283023}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 8.66, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.57, y: 1.87}
+    newSize: {x: 0.57, y: 1.87}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.285, y: 0.935}
+      - {x: -0.285, y: -0.935}
+      - {x: -0.35334668, y: -2.1545107}
+      - {x: -0.25174737, y: -2.3714833}
+      - {x: -1.4624859, y: -3.2516408}
+      - {x: -1.4506942, y: -4.768492}
+      - {x: -0.5206708, y: -5.757393}
+      - {x: 0.7828353, y: -5.596429}
+      - {x: 1.4438012, y: -4.939433}
+      - {x: 1.7026186, y: -4.0256653}
+      - {x: 1.6773016, y: -3.1686764}
+      - {x: 0.86791646, y: -2.7501073}
+      - {x: 0.32974535, y: -2.0268617}
+      - {x: 0.285, y: -0.935}
+      - {x: 0.285, y: 0.935}

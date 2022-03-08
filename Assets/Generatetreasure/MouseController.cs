@@ -35,6 +35,7 @@ namespace GenerateTreasure
             SetState(State.Idle);
             SetDirection(1);
             StartCoroutine(UpdateAI());
+           
         }
 
           private void OnDrawGizmos()
@@ -59,7 +60,8 @@ namespace GenerateTreasure
                 else if (m_CurrentState == State.Walk)
                 {
                     float distance = Vector2.Distance(m_StartPosition, transform.position);
-                    if (distance < m_WalkDistance)
+                    Debug.Log(distance);
+                    if (distance > m_WalkDistance)
                     {
                         if (transform.position.x > m_StartPosition.x && m_Direction == 1)
                         {
@@ -77,6 +79,7 @@ namespace GenerateTreasure
                         }                        
                         m_Rigidbody2D.velocity = new Vector2(m_WalkSpeed * m_Direction, m_Rigidbody2D.velocity.y);
                     }
+
                 }
                 yield return null;
             }
@@ -85,7 +88,7 @@ namespace GenerateTreasure
           private void SetDirection(int direction)
          {
               m_Direction = direction;
-              transform.localScale = new Vector3(m_Direction, 1, 1);
+              transform.localScale = new Vector3(-m_Direction, 1, 1);
          }
 
         private void SetState(State state)
