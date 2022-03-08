@@ -13,7 +13,7 @@ public class ClockHandler : MonoBehaviour
     void Start()
     {
         countdownTimer = gameObject.AddComponent<CountdownTimer>();
-        countdownTimer.AddDuration();
+        countdownTimer.AddDuration(CountdownTimer.BaseDuration);
         countdownTimer.Run();
         text = gameObject.GetComponent<Text>();
         CurrentLevel = LevelDataManagement.Instance.Level;

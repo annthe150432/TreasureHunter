@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CountdownTimer : Timer
 {
-    public const float BaseDuration = 5;
+    public const float BaseDuration = 91;
     public float AddedDuration { get; set; } = 0;
 
     private void Awake()
@@ -24,8 +24,8 @@ public class CountdownTimer : Timer
 		}
 	}
 
-    public void AddDuration()
+    public void AddDuration(float baseDuration)
     {
-        Duration = BaseDuration + AddedDuration;
+        Duration = baseDuration + AddedDuration;
     }
 }
