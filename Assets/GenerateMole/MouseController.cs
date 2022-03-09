@@ -23,6 +23,7 @@ namespace Mouse
         private State m_CurrentState;
         private int m_Direction = 1;
         private Vector3 m_StartPosition;
+        private bool isMoving = true;
 
         // Start is called before the first frame update
         void Start()
@@ -33,7 +34,17 @@ namespace Mouse
 
             SetState(State.Idle);
             SetDirection(1);
-            StartCoroutine(UpdateAI());
+            StartCoroutine(UpdateAI());          
+        }
+
+        void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(collision.tag.Equals("HookSwing"))
+            {
+               StopCoroutine(UpdateAI());
+               m_Rigidbody2D.velocity = new Vector2(0, 0);
+               SetState(State.Idle);
+            }
         }
 
         private void OnDrawGizmos()
