@@ -22,3 +22,6 @@ MoleDiamond4: 752
 StoneBig: 50
 StoneMedium: 20
 StoneSmall: 15
+
+Add value diamond: 150
+Energy boost: -2

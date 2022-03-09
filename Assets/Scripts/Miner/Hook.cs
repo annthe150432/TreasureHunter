@@ -140,6 +140,32 @@ public class Hook : MonoBehaviour
             }
             else
             {
+                // handle energy boost
+                if(LevelDataManagement.Instance.AddPullForce)
+                {
+                    // move hook up
+                    if (flagRod)
+                    {
+                        print("mm");
+                        temp += transform.up * Time.deltaTime * (moveSpeed - _slowDown + 5);
+                    }
+                    else
+                    {
+                        temp += transform.up * Time.deltaTime * moveSpeed;
+                    }
+                }
+                else
+                {
+                    if (flagRod)
+                    {
+                        temp += transform.up * Time.deltaTime * (moveSpeed - _slowDown);
+                    }
+                    else
+                    {
+                        temp += transform.up * Time.deltaTime * moveSpeed;
+                    }
+                }
+
                 // move hook up
                 if (flagRod)
                 {
@@ -211,6 +237,18 @@ public class Hook : MonoBehaviour
                     {
                         Text value = point.GetComponent<Text>();
                         int pointValue = value != null ? Int32.Parse(value.text) : 0;
+                        
+                        // handle double value for stone
+                        if(rod.tag.Equals("Rock")&&LevelDataManagement.Instance.DoubleStoneValue)
+                        {
+                            dollar *= 2;
+                        }
+
+                        // handle diamond polisher
+                        if (rod.tag.Equals("Diamond") && LevelDataManagement.Instance.AddDiamondValue)
+                        {
+                            dollar += 150;
+                        }
                         pointValue += dollar;
                         value.text = pointValue.ToString();
                         dollar = 0;
