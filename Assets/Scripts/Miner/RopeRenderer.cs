@@ -51,11 +51,11 @@ public class RopeRenderer : MonoBehaviour
         if(lineRenderer.enabled)
         {
             Vector3 temp = startPosition.position;
-            temp.z = -10f;
+            temp.z = 0f;
 
             startPosition.position = temp;
             temp = endLinePos;
-            temp.z = 0f;
+            temp.z = 1f;
 
             endLinePos = temp;
             lineRenderer.SetPosition(0, startPosition.position);
