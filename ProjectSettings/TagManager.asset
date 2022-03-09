@@ -19,6 +19,7 @@ TagManager:
   - Mole
   - MoleDiamond
   - Dynamite
+  - DynamiteCount
   layers:
   - Default
   - TransparentFX

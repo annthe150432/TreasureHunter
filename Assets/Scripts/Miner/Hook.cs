@@ -32,8 +32,7 @@ public class Hook : MonoBehaviour
     private Transform rod;
     private bool flagRod;
     private int dollar;
-
-    private int numBomb;
+    
     [SerializeField]
     private GameObject dynamitePrefab;
     private bool dynamiteThrow;
@@ -61,9 +60,7 @@ public class Hook : MonoBehaviour
         _slowDown = 0;
         flagRod = false;
         // should load from save
-        dollar = 0;
-        // should load from save
-        numBomb = LevelDataManagement.Instance.DynamiteCount;
+        dollar = 0;             
         dynamiteThrow = false;
     }
 
@@ -178,22 +175,21 @@ public class Hook : MonoBehaviour
 
                 // while moving can throw bomb
                 // throw bomb
-                if (numBomb > 0)
+                if (LevelDataManagement.Instance.DynamiteCount > 0)
                 {
 
                     // only throw when there is something on hook
                     if (rod != null)
                     {
                         // allow throw dynamite
-                        if (Input.GetKeyDown(KeyCode.Space))
+                        if (!canRotate && Input.GetMouseButtonDown(0))
                         {
                             Vector3 throwPos = transform.parent.position;
                             GameObject throwDynamite = Instantiate<GameObject>(dynamitePrefab, throwPos, Quaternion.identity);
                             throwDynamite.tag = "Dynamite";
                             throwDynamite.AddComponent<IngameDynamite>();
                             IngameDynamite throwDynamite_script = throwDynamite.GetComponent<IngameDynamite>();
-                            throwDynamite_script.Rod = rod;
-                            
+                            throwDynamite_script.Rod = rod;                                                      
                         }
                     }
                     if (dynamiteThrow)
