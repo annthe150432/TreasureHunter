@@ -172,5 +172,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: MoleDiamond
-  slowDown: 7
+  slowDown: 10
   value: 602
