@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Hook : MonoBehaviour
@@ -107,12 +108,17 @@ public class Hook : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
             if (canRotate)
             {
                 canRotate = false;
                 moveDown = true;
             }
         }
+
     }
 
     // Move the rope up and down

@@ -22,7 +22,18 @@ public class ActionButton : MonoBehaviour
 
     public void SkipGame()
     {
-        SceneManager.LoadScene("ShopScene");
+        GameObject targetMoneyGameObject = GameObject.FindGameObjectWithTag("TargetMoney");
+        GameObject currentMoneyGameObject = GameObject.FindGameObjectWithTag("CurrentMoney");
+        int target = int.Parse(targetMoneyGameObject.GetComponent<Text>().text);
+        int current = int.Parse(currentMoneyGameObject.GetComponent<Text>().text);
+        if (current < target)
+        {
+            SceneManager.LoadScene("ResultScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("ShopScene");
+        }
     }
 
     public void RestartCurrent()
