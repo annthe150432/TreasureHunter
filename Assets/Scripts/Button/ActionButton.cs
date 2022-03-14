@@ -9,15 +9,15 @@ public class ActionButton : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
-        GameObject canvas = GameObject.FindGameObjectsWithTag("CanvasPause")[0];
-        canvas.GetComponent<Canvas>().sortingOrder = 5;
+        GameObject canvas = GameObject.FindGameObjectWithTag("CanvasPause");
+        canvas.GetComponent<Canvas>().enabled = true;
     }
 
     public void ContinueGame()
     {
         Time.timeScale = 1;
-        GameObject canvas = GameObject.FindGameObjectsWithTag("CanvasPause")[0];
-        canvas.GetComponent<Canvas>().sortingOrder = 0;
+        GameObject canvas = GameObject.FindGameObjectWithTag("CanvasPause");
+        canvas.GetComponent<Canvas>().enabled = false;
     }
 
     public void SkipGame()
