@@ -17,7 +17,6 @@ public class DataManagement<T>
         {
             filename = filename + ".json";
             String path = Path.Combine(Application.persistentDataPath, datafolder, filename);
-            Debug.Log(path);
             if (!File.Exists(path))
             {
                 throw new FileNotFoundException("Not found " + path);
