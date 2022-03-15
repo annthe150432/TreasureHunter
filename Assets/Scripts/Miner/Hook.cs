@@ -265,8 +265,7 @@ public class Hook : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (!flagRod)
-        {
-            print(collision.name);
+        {           
             // get hooked object information
             rod = collision.transform;
             dollar = rod.GetComponent<Rod>().value;
