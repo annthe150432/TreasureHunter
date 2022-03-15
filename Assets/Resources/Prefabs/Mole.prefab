@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 4641668172418138596}
   - component: {fileID: 4641668172418138585}
   - component: {fileID: 4641668172418138591}
-  - component: {fileID: 4641668172418138584}
   - component: {fileID: 7017493807854479765}
+  - component: {fileID: 3675549349765332911}
+  - component: {fileID: 8940740380412515393}
   m_Layer: 0
   m_Name: Mole
   m_TagString: Mole
@@ -143,22 +144,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &4641668172418138584
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4641668172418138597}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.34375
 --- !u!114 &7017493807854479765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,3 +159,66 @@ MonoBehaviour:
   _tag: Mole
   slowDown: 5
   value: 2
+--- !u!114 &3675549349765332911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4641668172418138597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c4e8c72e99a3c41b20cc4bda2f96d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &8940740380412515393
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4641668172418138597}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6875, y: 0.359375}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.20267606, y: 0.16157383}
+      - {x: 0.070679165, y: 0.18004695}
+      - {x: -0.025397316, y: 0.15472297}
+      - {x: -0.0968929, y: 0.11765808}
+      - {x: -0.13950269, y: 0.13893174}
+      - {x: -0.21169809, y: 0.12587133}
+      - {x: -0.24607733, y: 0.05575956}
+      - {x: -0.2712953, y: 0.00758804}
+      - {x: -0.29237905, y: -0.048036598}
+      - {x: -0.34021297, y: -0.04711912}
+      - {x: -0.3414858, y: -0.12126699}
+      - {x: -0.2564241, y: -0.11847758}
+      - {x: -0.21762769, y: -0.15704541}
+      - {x: -0.18181178, y: -0.18013039}
+      - {x: -0.09577618, y: -0.15288122}
+      - {x: -0.068550825, y: -0.15219547}
+      - {x: -0.008783972, y: -0.16649297}
+      - {x: 0.091620356, y: -0.1670629}
+      - {x: 0.14903365, y: -0.1460352}
+      - {x: 0.20383546, y: -0.1733217}
+      - {x: 0.28736922, y: -0.16383804}
+      - {x: 0.3256363, y: -0.14142041}
+      - {x: 0.3350697, y: -0.08881364}
+      - {x: 0.28583166, y: -0.032221645}
+      - {x: 0.2758237, y: 0.012116458}
+      - {x: 0.2783124, y: 0.072352245}

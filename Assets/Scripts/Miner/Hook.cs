@@ -266,6 +266,7 @@ public class Hook : MonoBehaviour
     {
         if (!flagRod)
         {
+            print(collision.name);
             // get hooked object information
             rod = collision.transform;
             dollar = rod.GetComponent<Rod>().value;

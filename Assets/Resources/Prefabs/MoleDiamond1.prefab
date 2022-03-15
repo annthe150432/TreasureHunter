@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1495438846282054803}
   - component: {fileID: 1495438846282054804}
   - component: {fileID: 1495438846282054805}
-  - component: {fileID: 1495438846282054806}
   - component: {fileID: -3698730116632928860}
+  - component: {fileID: 7378009052633675933}
   m_Layer: 0
   m_Name: MoleDiamond1
   m_TagString: MoleDiamond
@@ -143,22 +143,6 @@ MonoBehaviour:
   m_Rigidbody2D: {fileID: 1495438846282054804}
   m_WalkSpeed: 4
   m_WalkDistance: 3.9
---- !u!58 &1495438846282054806
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495438846282054807}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.34375
 --- !u!114 &-3698730116632928860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,3 +158,46 @@ MonoBehaviour:
   _tag: MoleDiamond
   slowDown: 10
   value: 602
+--- !u!60 &7378009052633675933
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495438846282054807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6875, y: 0.375}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.22894871, y: 0.11119029}
+      - {x: -0.28261626, y: -0.022642076}
+      - {x: -0.32563627, y: -0.08787483}
+      - {x: -0.22708178, y: -0.18820494}
+      - {x: -0.10263622, y: -0.15433967}
+      - {x: -0.067742586, y: -0.13846266}
+      - {x: 0.013659596, y: -0.16365445}
+      - {x: 0.1548903, y: -0.14190501}
+      - {x: 0.24186063, y: -0.1784432}
+      - {x: 0.25101054, y: -0.17556703}
+      - {x: 0.33601773, y: -0.12592489}
+      - {x: 0.2712953, y: 0.03510502}
+      - {x: 0.27378392, y: 0.059786856}
+      - {x: 0.26687264, y: 0.098915726}
+      - {x: 0.19339478, y: 0.17165053}
+      - {x: 0.00015425682, y: 0.17820334}
+      - {x: -0.098970056, y: 0.1362747}
+      - {x: -0.19859648, y: 0.14900848}
