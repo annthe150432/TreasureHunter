@@ -35,7 +35,7 @@ public class LevelDataManagement
     }
     public int Level { get; set; } = 0;
     public int Target { get; set; } = 0;
-    public int Current { get; set; } = 100;
+    public int Current { get; set; } = 0;
     public int DynamiteCount { get; set; } = 0;
     public float AddedTime { get; set; } = 0;
     public bool DoubleStoneValue { get; set; } = false;
@@ -54,7 +54,7 @@ public class LevelDataManagement
         {
             List<LevelDetail> levelDetails = DataManagement<List<LevelDetail>>.ReadDataFromFile("leveldetails", false);
             Level = level;
-            Target = BaseTarget * 7 * (Level - 1) + BaseTarget;
+            Target = BaseTarget * ((Level - 1) * Level / 2 + 5 * (Level - 1) + 1);
             if (levelDetails.Find(lv => lv.Level == level) == null)
             {
                 Level = 0;
