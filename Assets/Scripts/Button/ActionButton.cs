@@ -38,7 +38,17 @@ public class ActionButton : MonoBehaviour
 
     public void RestartCurrent()
     {
+
+        GameObject currentMoneyGameObject = GameObject.FindGameObjectWithTag("CurrentMoney");
+        CurrentPointHandler currentPointHandler = currentMoneyGameObject.GetComponent<CurrentPointHandler>();
+        currentPointHandler.RestartLevel = true;
         SceneManager.LoadScene("BaseScene");
+        Time.timeScale = 1;
+    }
+
+    public void ExitCurrent()
+    {
+        SceneManager.LoadScene("HomeScene");
     }
 
     public void QuitGame()
