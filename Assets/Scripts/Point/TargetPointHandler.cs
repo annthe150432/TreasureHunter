@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class TargetPointHandler : MonoBehaviour
 {
+    
     void Start()
     {
-        Text value = GetComponent<Text>();
+        GameObject targetMoney = GameObject.FindGameObjectWithTag("TargetMoney");
+        Text value = targetMoney.GetComponent<Text>(); 
         value.text = LevelDataManagement.Instance.Target.ToString();
+
     }
 }
