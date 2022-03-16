@@ -26,6 +26,7 @@ public class Hook : MonoBehaviour
 
     public float minY = -2.5f;
     private float initialY;
+    private Vector3 initialPos;
 
     private bool moveDown;
     private float _slowDown;
@@ -56,6 +57,7 @@ public class Hook : MonoBehaviour
     {
 
         initialY = transform.position.y;
+        initialPos = transform.position;
         initialMoveSpeed = moveSpeed;
         canRotate = true;
         _slowDown = 0;
@@ -209,7 +211,7 @@ public class Hook : MonoBehaviour
                 }
 
             }
-            transform.position = temp;
+            
 
             if (temp.y <= minY)
             {
@@ -220,6 +222,7 @@ public class Hook : MonoBehaviour
             if (temp.y >= initialY)
             {
                 // hook reached the top, start swinging
+                temp = initialPos;          
                 canRotate = true;
                 ropeRenderer.RenderLine(temp, false);
                 moveSpeed = initialMoveSpeed;
@@ -258,6 +261,7 @@ public class Hook : MonoBehaviour
                 }
 
             }
+            transform.position = temp;
             ropeRenderer.RenderLine(temp, true);
         }
     }
