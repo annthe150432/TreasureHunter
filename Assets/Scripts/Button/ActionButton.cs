@@ -38,7 +38,21 @@ public class ActionButton : MonoBehaviour
 
     public void RestartCurrent()
     {
+
+        GameObject currentMoneyGameObject = GameObject.FindGameObjectWithTag("CurrentMoney");
+        CurrentPointHandler currentPointHandler = currentMoneyGameObject.GetComponent<CurrentPointHandler>();
+        currentPointHandler.RestartLevel = true;
         SceneManager.LoadScene("BaseScene");
+        Time.timeScale = 1;
+    }
+
+    public void ExitCurrent()
+    {
+        GameObject currentMoneyGameObject = GameObject.FindGameObjectWithTag("CurrentMoney");
+        CurrentPointHandler currentPointHandler = currentMoneyGameObject.GetComponent<CurrentPointHandler>();
+        currentPointHandler.RestartLevel = true;
+        SceneManager.LoadScene("HomeScene");
+        Time.timeScale = 1;
     }
 
     public void QuitGame()
@@ -68,7 +82,7 @@ public class ActionButton : MonoBehaviour
     public void ContinueFromLastSave()
     {
         LevelDataManagement data = LevelDataManagement.Instance;
-        LevelDataManagement.Instance.UpdateLevelData(level: data.Level, current: data.Current);
+        LevelDataManagement.Instance.UpdateLevelData(level: data.saveData.Level, current: data.saveData.Current);
         SceneManager.LoadScene("BaseScene");
     }
 

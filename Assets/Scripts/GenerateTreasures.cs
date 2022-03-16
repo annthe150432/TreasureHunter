@@ -26,7 +26,6 @@ public class GenerateTreasures : MonoBehaviour
                 GameObject gameObject = Resources.Load<GameObject>(treasure.Prefab) as GameObject;
                 GameObject.Instantiate(gameObject, new Vector3(treasure.X, treasure.Y, treasure.Z), transform.rotation);
             }
-        
     }
     void Update()
     {

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CurrentPointHandler : MonoBehaviour
 {
+    public bool RestartLevel = false;
     void Start()
     {
         Text value = GetComponent<Text>();
@@ -14,6 +15,7 @@ public class CurrentPointHandler : MonoBehaviour
     private void OnDestroy()
     {
         Text value = GetComponent<Text>();
-        LevelDataManagement.Instance.UpdateLevelData(current: int.Parse(value.text));
+        if (!RestartLevel)
+            LevelDataManagement.Instance.UpdateLevelData(current: int.Parse(value.text));
     }
 }
