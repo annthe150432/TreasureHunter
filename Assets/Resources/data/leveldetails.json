@@ -4,40 +4,16 @@
     "Target": 650,
     "treasure": [
       {
-        "X": 4.3,
-        "Y": -1.88,
-        "Z": 1,
-        "Prefab": "Prefabs/Diamond1"
-      },
-      {
-        "X": -5.8,
-        "Y": -3.16,
-        "Z": 1,
-        "Prefab": "Prefabs/Diamond1"
-      },
-      {
         "X": 4.23,
         "Y": -3.94,
         "Z": 1,
-        "Prefab": "Prefabs/Diamond1"
-      },
-      {
-        "X": 0.5,
-        "Y": -5.76,
-        "Z": 1,
-        "Prefab": "Prefabs/Diamond2"
-      },
-      {
-        "X": 7.76,
-        "Y": -5.48,
-        "Z": 1,
-        "Prefab": "Prefabs/Diamond2"
+        "Prefab": "Prefabs/StoneMedium"
       },
       {
         "X": -9.67,
         "Y": -4.56,
         "Z": 1,
-        "Prefab": "Prefabs/Diamond2"
+        "Prefab": "Prefabs/GoldSmall"
       },
       {
         "X": -5.23,
@@ -49,13 +25,19 @@
         "X": 0.23,
         "Y": -3.18,
         "Z": 1,
+        "Prefab": "Prefabs/GoldSmall"
+      },
+      {
+        "X": 1.03,
+        "Y": -5.21,
+        "Z": 1,
         "Prefab": "Prefabs/GoldBig"
       },
       {
         "X": 9.97,
         "Y": -5.28,
         "Z": 1,
-        "Prefab": "Prefabs/GoldBig"
+        "Prefab": "Prefabs/GoldMedium"
       },
       {
         "X": -6.04,
@@ -67,17 +49,23 @@
         "X": 3.05,
         "Y": -1.14,
         "Z": 1,
-        "Prefab": "Prefabs/StoneBig"
+        "Prefab": "Prefabs/StoneSmall"
       },
       {
         "X": 7.18,
         "Y": -1.52,
         "Z": 1,
-        "Prefab": "Prefabs/StoneBig"
+        "Prefab": "Prefabs/StoneMedium"
       },
       {
         "X": -10.56,
         "Y": -2.16,
+        "Z": 1,
+        "Prefab": "Prefabs/StoneMedium"
+      },
+      {
+        "X": -0.89,
+        "Y": -1.37,
         "Z": 1,
         "Prefab": "Prefabs/StoneBig"
       },
@@ -85,7 +73,7 @@
         "X": 8.21,
         "Y": -3.45,
         "Z": 1,
-        "Prefab":  "Prefabs/Mole"
+        "Prefab": "Prefabs/Mole"
       }
     ]
 
@@ -95,28 +83,10 @@
     "Target": 1400,
     "treasure": [
       {
-        "X": 11.57,
-        "Y": -6.21,
-        "Z": 1,
-        "Prefab": "Prefabs/Diamond1"
-      },
-      {
-        "X": 6.67,
-        "Y": -6.36,
-        "Z": 1,
-        "Prefab": "Prefabs/Diamond1"
-      },
-      {
         "X": 3.01,
         "Y": -5.74,
         "Z": 1,
         "Prefab": "Prefabs/Diamond1"
-      },
-      {
-        "X": -2.17,
-        "Y": -4.93,
-        "Z": 1,
-        "Prefab": "Prefabs/Diamond2"
       },
       {
         "X": -6.1,
@@ -137,28 +107,52 @@
         "Prefab": "Prefabs/GoldBig"
       },
       {
-        "X": 2.17,
-        "Y": -3.43,
-        "Z": 1,
-        "Prefab": "Prefabs/GoldBig"
-      },
-      {
         "X": -5.15,
         "Y": -3.75,
         "Z": 1,
         "Prefab": "Prefabs/GoldBig"
       },
       {
-        "X": -8.39,
-        "Y": -1,
+        "X": 2.6,
+        "Y": -4.38,
+        "Z": 1,
+        "Prefab": "Prefabs/GoldMedium"
+      },
+      {
+        "X": -1.1,
+        "Y": -5.41,
+        "Z": 1,
+        "Prefab": "Prefabs/GoldSmall"
+      },
+      {
+        "X": -7.5,
+        "Y": -0.8,
         "Z": 1,
         "Prefab": "Prefabs/StoneBig"
       },
       {
-        "X": -3.76,
-        "Y": -0.62,
+        "X": -1.91,
+        "Y": -0.14,
         "Z": 1,
         "Prefab": "Prefabs/StoneBig"
+      },
+      {
+        "X": -10.14,
+        "Y": -4.11,
+        "Z": 1,
+        "Prefab": "Prefabs/StoneBig"
+      },
+      {
+        "X": -0.55,
+        "Y": -3.08,
+        "Z": 1,
+        "Prefab": "Prefabs/StoneMedium"
+      },
+      {
+        "X": 2.4,
+        "Y": -2.06,
+        "Z": 1,
+        "Prefab": "Prefabs/StoneMedium"
       },
       {
         "X": 5.18,
@@ -167,8 +161,8 @@
         "Prefab": "Prefabs/StoneBig"
       },
       {
-        "X": 10.24,
-        "Y": -0.24,
+        "X": 9.76,
+        "Y": -1.75,
         "Z": 1,
         "Prefab": "Prefabs/StoneBig"
       },
@@ -189,13 +183,13 @@
   {
     "Level": 3,
     "Target": 1800,
-    "treasure": [     
+    "treasure": [
       {
         "X": 8.39,
         "Y": -4.98,
         "Z": 1,
         "Prefab": "Prefabs/Diamond1"
-      },      
+      },
       {
         "X": -11.21,
         "Y": -4.89,
@@ -203,8 +197,8 @@
         "Prefab": "Prefabs/Diamond2"
       },
       {
-        "X": -11.16,
-        "Y": -6.66,
+        "X": 0.49,
+        "Y": -6.27,
         "Z": 1,
         "Prefab": "Prefabs/Diamond2"
       },
@@ -215,8 +209,8 @@
         "Prefab": "Prefabs/GoldMedium"
       },
       {
-        "X": -5.15,
-        "Y": -3.96,
+        "X": -4.52,
+        "Y": -3.18,
         "Z": 1,
         "Prefab": "Prefabs/GoldBig"
       },
@@ -227,10 +221,16 @@
         "Prefab": "Prefabs/GoldSmall"
       },
       {
-        "X": 6.69,
-        "Y": -3.69,
+        "X": 5.75,
+        "Y": -3.14,
         "Z": 1,
         "Prefab": "Prefabs/GoldBig"
+      },
+      {
+        "X": 10.79,
+        "Y": -3.6,
+        "Z": 1,
+        "Prefab": "Prefabs/GoldSmall"
       },
       {
         "X": 11,
@@ -242,7 +242,19 @@
         "X": 7.56,
         "Y": -1.37,
         "Z": 1,
-        "Prefab": "Prefabs/StoneBig"
+        "Prefab": "Prefabs/StoneMedium"
+      },
+      {
+        "X": 0.7,
+        "Y": 0.31,
+        "Z": 1,
+        "Prefab": "Prefabs/StoneMedium"
+      },
+      {
+        "X": 3.91,
+        "Y": -0.39,
+        "Z": 1,
+        "Prefab": "Prefabs/StoneSmall"
       },
       {
         "X": 1.37,
@@ -285,7 +297,7 @@
         "Y": -5.72,
         "Z": 1,
         "Prefab": "Prefabs/Diamond1"
-      },    
+      },
       {
         "X": 11.22,
         "Y": -5.77,
@@ -293,28 +305,64 @@
         "Prefab": "Prefabs/Diamond4"
       },
       {
+        "X": -5.21,
+        "Y": -5.68,
+        "Z": 1,
+        "Prefab": "Prefabs/Diamond3"
+      },
+      {
+        "X": -1.37,
+        "Y": -5.13,
+        "Z": 1,
+        "Prefab": "Prefabs/Diamond4"
+      },
+      {
+        "X": 3.63,
+        "Y": -5.67,
+        "Z": 1,
+        "Prefab": "Prefabs/Diamond2"
+      },
+      {
+        "X": 7.4,
+        "Y": -4.66,
+        "Z": 1,
+        "Prefab": "Prefabs/Diamond1"
+      },
+      {
         "X": 7.69,
         "Y": -2.98,
         "Z": 1,
-        "Prefab": "Prefabs/GoldMedium"
+        "Prefab": "Prefabs/StoneMedium"
       },
       {
         "X": 1.87,
         "Y": -2.98,
         "Z": 1,
-        "Prefab": "Prefabs/GoldBig"
+        "Prefab": "Prefabs/StoneBig"
+      },
+      {
+        "X": 1.44,
+        "Y": 0.07,
+        "Z": 1,
+        "Prefab": "Prefabs/StoneBig"
+      },
+      {
+        "X": 10.96,
+        "Y": -2.05,
+        "Z": 1,
+        "Prefab": "Prefabs/StoneBig"
       },
       {
         "X": -3.22,
         "Y": -4.01,
         "Z": 1,
-        "Prefab": "Prefabs/GoldSmall"
+        "Prefab": "Prefabs/StoneMedium"
       },
       {
         "X": -8.13,
         "Y": -3.52,
         "Z": 1,
-        "Prefab": "Prefabs/GoldSmall"
+        "Prefab": "Prefabs/StoneSmall"
       },
       {
         "X": 7.31,
@@ -323,8 +371,8 @@
         "Prefab": "Prefabs/StoneMedium"
       },
       {
-        "X": 3.37,
-        "Y": -1.32,
+        "X": 4.95,
+        "Y": -1.94,
         "Z": 1,
         "Prefab": "Prefabs/StoneSmall"
       },
@@ -338,7 +386,7 @@
         "X": -5.36,
         "Y": -1.92,
         "Z": 1,
-        "Prefab": "Prefabs/StoneSmall"
+        "Prefab": "Prefabs/StoneMedium"
       },
       {
         "X": -9.24,
@@ -347,14 +395,14 @@
         "Prefab": "Prefabs/StoneMedium"
       },
       {
-        "X": -5.82,
-        "Y": -6.51,
+        "X": -7.62,
+        "Y": -4.93,
         "Z": 1,
         "Prefab": "Prefabs/MoleDiamond1"
       },
       {
-        "X": 4.96,
-        "Y": -6.48,
+        "X": 7.54,
+        "Y": -4.01,
         "Z": 1,
         "Prefab": "Prefabs/MoleDiamond4"
       }
@@ -365,94 +413,130 @@
     "Target": 3000,
     "treasure": [
       {
-        "X": -0.66,
-        "Y": -6.01,
+        "X": -5.45,
+        "Y": -2.86,
         "Z": 1,
         "Prefab": "Prefabs/Diamond1"
       },
       {
-        "X": -10,
-        "Y": -4.98,
+        "X": 5.04,
+        "Y": -2.05,
         "Z": 1,
         "Prefab": "Prefabs/Diamond2"
       },
       {
-        "X": 11.65,
-        "Y": -4.68,
+        "X": -7.07,
+        "Y": -2.43,
         "Z": 1,
         "Prefab": "Prefabs/Diamond3"
       },
       {
-        "X": -5.22,
+        "X": 1.31,
+        "Y": -1.88,
+        "Z": 1,
+        "Prefab": "Prefabs/GoldSmall"
+      },
+      {
+        "X": 2.72,
         "Y": -3.76,
         "Z": 1,
         "Prefab": "Prefabs/GoldSmall"
       },
       {
-        "X": 2.36,
-        "Y": -3.27,
+        "X": 7.19,
+        "Y": -3.68,
+        "Z": 1,
+        "Prefab": "Prefabs/GoldSmall"
+      },
+      {
+        "X": 10.04,
+        "Y": -2.28,
         "Z": 1,
         "Prefab": "Prefabs/GoldBig"
       },
       {
-        "X": 9.88,
-        "Y": -3.88,
+        "X": -0.24,
+        "Y": -3.43,
+        "Z": 1,
+        "Prefab": "Prefabs/GoldBig"
+      },
+      {
+        "X": 5.12,
+        "Y": -4.43,
         "Z": 1,
         "Prefab": "Prefabs/GoldMedium"
       },
       {
-        "X": 9.5,
-        "Y": -1.43,
+        "X": 4.37,
+        "Y": 0,
+        "Z": 1,
+        "Prefab": "Prefabs/GoldMedium"
+      },
+      {
+        "X": 7.97,
+        "Y": -0.55,
+        "Z": 1,
+        "Prefab": "Prefabs/GoldMedium"
+      },
+      {
+        "X": -10.27,
+        "Y": -2.38,
         "Z": 1,
         "Prefab": "Prefabs/StoneSmall"
       },
       {
-        "X": 6.35,
-        "Y": -1.43,
+        "X": -8.25,
+        "Y": -3.74,
         "Z": 1,
         "Prefab": "Prefabs/StoneSmall"
       },
       {
-        "X": 2.95,
-        "Y": -1.37,
+        "X": -2.4,
+        "Y": -2.49,
+        "Z": 1,
+        "Prefab": "Prefabs/StoneSmall"
+      },
+      {
+        "X": -5.94,
+        "Y": -4.41,
+        "Z": 1,
+        "Prefab": "Prefabs/StoneSmall"
+      },
+      {
+        "X": -4.04,
+        "Y": -4.24,
         "Z": 1,
         "Prefab": "Prefabs/StoneMedium"
       },
       {
-        "X": -1.72,
-        "Y": -1.67,
-        "Z": 1,
-        "Prefab": "Prefabs/StoneSmall"
-      },
-      {
-        "X": -5.06,
-        "Y": -1.37,
+        "X": -3.72,
+        "Y": -0.96,
         "Z": 1,
         "Prefab": "Prefabs/StoneMedium"
       },
       {
-        "X": -7.55,
-        "Y": -1.25,
+        "X": -5.88,
+        "Y": 0.33,
         "Z": 1,
         "Prefab": "Prefabs/StoneBig"
       },
       {
-        "X": -10.34,
-        "Y": -0.76,
+        "X": -0.32,
+        "Y": 0,
         "Z": 1,
         "Prefab": "Prefabs/StoneBig"
       },
       {
-        "X": -4.51,
-        "Y": -6.68,
+        "X": -8.62,
+        "Y": -0.45,
+        "Z": 1,
+        "Prefab": "Prefabs/StoneBig"
+      },
+      {
+        "X": -0.34,
+        "Y": -5.49,
         "Z": 1,
         "Prefab": "Prefabs/MoleDiamond4"
-      },
-      {
-        "X": 5.72,
-        "Y": -5.61,
-        "Z": 1,
-        "Prefab": "Prefabs/Mole"
       }
     ]
   }

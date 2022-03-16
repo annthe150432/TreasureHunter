@@ -54,7 +54,7 @@ public class LevelDataManagement
         {
             List<LevelDetail> levelDetails = DataManagement<List<LevelDetail>>.ReadDataFromFile("leveldetails", false);
             Level = level;
-            Target = BaseTarget * ((Level - 1) * Level / 2 + 5 * (Level - 1) + 1);
+            Target = 650 * ((Level - 1) * (Level - 1) + (Level - 1) / 2 + 1);
             if (levelDetails.Find(lv => lv.Level == level) == null)
             {
                 Level = 0;
