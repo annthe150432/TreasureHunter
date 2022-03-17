@@ -12,7 +12,7 @@ public class Hook : MonoBehaviour
     /// To do:
     /// Handle rest of items used: clock, diamond polisher, energy, square stone, hook mole
     /// </summary>
-    
+
     public float rotateSpeed = 30f;
     public float maxZ = 55f;
     public float minZ = -55f;
@@ -34,7 +34,7 @@ public class Hook : MonoBehaviour
     private Transform rod;
     private bool flagRod;
     private int dollar;
-    
+
     [SerializeField]
     private GameObject dynamitePrefab;
     private bool dynamiteThrow;
@@ -63,7 +63,7 @@ public class Hook : MonoBehaviour
         _slowDown = 0;
         flagRod = false;
         // should load from save
-        dollar = 0;             
+        dollar = 0;
         dynamiteThrow = false;
     }
 
@@ -146,7 +146,7 @@ public class Hook : MonoBehaviour
             else
             {
                 // handle energy boost
-                if(LevelDataManagement.Instance.AddPullForce)
+                if (LevelDataManagement.Instance.AddPullForce)
                 {
                     // move hook up
                     if (flagRod)
@@ -197,7 +197,7 @@ public class Hook : MonoBehaviour
                             throwDynamite.tag = "Dynamite";
                             throwDynamite.AddComponent<IngameDynamite>();
                             IngameDynamite throwDynamite_script = throwDynamite.GetComponent<IngameDynamite>();
-                            throwDynamite_script.Rod = rod;                                                      
+                            throwDynamite_script.Rod = rod;
                         }
                     }
                     if (dynamiteThrow)
@@ -211,7 +211,7 @@ public class Hook : MonoBehaviour
                 }
 
             }
-            
+
 
             if (temp.y <= minY)
             {
@@ -222,7 +222,7 @@ public class Hook : MonoBehaviour
             if (temp.y >= initialY)
             {
                 // hook reached the top, start swinging
-                temp = initialPos;          
+                temp = initialPos;
                 canRotate = true;
                 ropeRenderer.RenderLine(temp, false);
                 moveSpeed = initialMoveSpeed;
@@ -242,9 +242,9 @@ public class Hook : MonoBehaviour
                     {
                         Text value = point.GetComponent<Text>();
                         int pointValue = value != null ? Int32.Parse(value.text) : 0;
-                        
+
                         // handle double value for stone
-                        if(rod.tag.Equals("Rock")&&LevelDataManagement.Instance.DoubleStoneValue)
+                        if (rod.tag.Equals("Rock") && LevelDataManagement.Instance.DoubleStoneValue)
                         {
                             dollar *= 2;
                         }
@@ -253,10 +253,21 @@ public class Hook : MonoBehaviour
                         if (rod.tag.Equals("Diamond") && LevelDataManagement.Instance.AddDiamondValue)
                         {
                             dollar += 150;
-                        }
+                        }                      
                         pointValue += dollar;
                         value.text = pointValue.ToString();
                         dollar = 0;
+
+                        // handle button skip
+                        int targetPointValue = Int32.Parse(GameObject.FindGameObjectWithTag("TargetMoney").GetComponent<Text>().text);
+                        if (pointValue < targetPointValue)
+                        {
+                            GameObject.Find("ButtonSkip").GetComponent<Button>().interactable = false;
+                        }
+                        else
+                        {
+                            GameObject.Find("ButtonSkip").GetComponent<Button>().interactable = true;
+                        }
                     }
                 }
 
@@ -269,7 +280,7 @@ public class Hook : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (!flagRod)
-        {           
+        {
             // get hooked object information
             rod = collision.transform;
             dollar = rod.GetComponent<Rod>().value;

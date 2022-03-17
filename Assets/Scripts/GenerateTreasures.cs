@@ -8,12 +8,13 @@ using UnityEngine.UI;
 
 public class GenerateTreasures : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
         List<LevelDetail> levelDetails = DataManagement<List<LevelDetail>>.ReadDataFromFile("leveldetails", false);
         int level = LevelDataManagement.Instance.Level;
-        if(level == 1)
+        if (level == 1)
         {
             LevelDataManagement.Instance.DynamiteCount = 0;
         }
@@ -21,14 +22,24 @@ public class GenerateTreasures : MonoBehaviour
 
 
         List<Treasure> treasures = levell.treasure;
-            foreach (Treasure treasure in treasures)
-            {
-                GameObject gameObject = Resources.Load<GameObject>(treasure.Prefab) as GameObject;
-                GameObject.Instantiate(gameObject, new Vector3(treasure.X, treasure.Y, treasure.Z), transform.rotation);
-            }
+        foreach (Treasure treasure in treasures)
+        {
+            GameObject gameObject = Resources.Load<GameObject>(treasure.Prefab) as GameObject;
+            GameObject.Instantiate(gameObject, new Vector3(treasure.X, treasure.Y, treasure.Z), transform.rotation);
+        }
+
+        // button skip check
+        if(LevelDataManagement.Instance.Current<LevelDataManagement.Instance.Target)
+        {
+            GameObject.Find("ButtonSkip").GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            GameObject.Find("ButtonSkip").GetComponent<Button>().interactable = true;
+        }
     }
     void Update()
     {
-        
+
     }
 }
