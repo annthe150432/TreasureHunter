@@ -3234,8 +3234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 30
-  maxZ: 55
-  minZ: -55
+  maxZ: 65
+  minZ: -65
   moveSpeed: 15
   minY: -6.5
   dynamitePrefab: {fileID: 4970890477934641252, guid: 649f016e8466a8a44a5b7cb5a7f819ef, type: 3}
