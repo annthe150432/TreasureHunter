@@ -253,10 +253,17 @@ public class Hook : MonoBehaviour
                         if (rod.tag.Equals("Diamond") && LevelDataManagement.Instance.AddDiamondValue)
                         {
                             dollar += 150;
-                        }                      
+                        }
+
                         pointValue += dollar;
                         value.text = pointValue.ToString();
+
+                        // manage add point text
+                        ExtraPointHandler extraPointHandler = GameObject.FindGameObjectWithTag("ExtraMoney").GetComponent<ExtraPointHandler>();
+                        extraPointHandler.AddPoint(dollar);
+
                         dollar = 0;
+
 
                         // handle button skip
                         int targetPointValue = Int32.Parse(GameObject.FindGameObjectWithTag("TargetMoney").GetComponent<Text>().text);

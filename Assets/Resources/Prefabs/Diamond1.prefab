@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5639548643094088739}
   - component: {fileID: -1855431434052686668}
   - component: {fileID: 7481061810489729719}
-  - component: {fileID: 6797347824023003014}
+  - component: {fileID: 6654652501192421044}
   m_Layer: 0
   m_Name: Diamond1
   m_TagString: Diamond
@@ -121,7 +121,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &6797347824023003014
+--- !u!60 &6654652501192421044
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +131,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -146,17 +146,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.014728546, y: 0.17478955}
-      - {x: -0.12449551, y: 0.16947424}
-      - {x: -0.2208538, y: 0.09982085}
-      - {x: -0.2501192, y: 0.06336892}
-      - {x: -0.19753742, y: 0.007691622}
-      - {x: -0.023799896, y: -0.17478967}
-      - {x: -0.026394844, y: -0.17624664}
-      - {x: -0.020565987, y: -0.1777041}
-      - {x: 0.06687164, y: -0.08880949}
-      - {x: 0.21648216, y: 0.062258363}
-      - {x: 0.22231102, y: 0.066630244}
-      - {x: 0.2208538, y: 0.0714854}
-      - {x: 0.103713036, y: 0.16300774}
-      - {x: -0.010691643, y: 0.17041767}
+    - - {x: -0.019891739, y: 0.12183142}
+      - {x: -0.08538246, y: 0.11560333}
+      - {x: -0.12357521, y: 0.0936805}
+      - {x: -0.17144871, y: 0.061222434}
+      - {x: -0.015198708, y: -0.07837272}
+      - {x: 0.13279247, y: 0.04854834}
+      - {x: 0.08801842, y: 0.07908559}
+      - {x: 0.029467583, y: 0.11392987}

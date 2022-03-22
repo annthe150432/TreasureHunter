@@ -20,6 +20,7 @@ TagManager:
   - MoleDiamond
   - Dynamite
   - DynamiteCount
+  - ExtraMoney
   layers:
   - Default
   - TransparentFX
