@@ -26,10 +26,11 @@ public class ActionButton : MonoBehaviour
         GameObject currentMoneyGameObject = GameObject.FindGameObjectWithTag("CurrentMoney");
         int target = int.Parse(targetMoneyGameObject.GetComponent<Text>().text);
         int current = int.Parse(currentMoneyGameObject.GetComponent<Text>().text);
-        if (current < target)
+        if (current < target || !LevelDataManagement.Instance.NextLevel)
         {
             SceneManager.LoadScene("ResultScene");
-        }
+           
+        }       
         else
         {
             SceneManager.LoadScene("ShopScene");
