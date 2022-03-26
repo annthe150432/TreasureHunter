@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Gold
-  slowDown: 12
+  slowDown: 13
   value: 500
 --- !u!50 &-4286112628219647535
 Rigidbody2D:

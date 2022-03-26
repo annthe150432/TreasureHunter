@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Rock
-  slowDown: 8
+  slowDown: 10
   value: 15
 --- !u!50 &4234399708763803210
 Rigidbody2D:

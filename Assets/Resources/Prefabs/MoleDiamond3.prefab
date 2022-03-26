@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: MoleDiamond
-  slowDown: 10
+  slowDown: 11
   value: 702
 --- !u!60 &2423954256137356445
 PolygonCollider2D:
