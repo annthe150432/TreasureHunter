@@ -34,16 +34,20 @@ namespace Mouse
 
             SetState(State.Idle);
             SetDirection(1);
-            StartCoroutine(UpdateAI());          
+            StartCoroutine(UpdateAI());
         }
 
         void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.tag.Equals("HookSwing"))
+            if (collision.tag.Equals("HookSwing"))
             {
-               StopCoroutine(UpdateAI());
-               m_Rigidbody2D.velocity = new Vector2(0, 0);
-               SetState(State.Idle);
+                StopCoroutine(UpdateAI());
+                m_Rigidbody2D.velocity = new Vector2(0, 0);
+                SetState(State.Idle);
+            }
+            else
+            {
+                Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(), collision, true);
             }
         }
 
@@ -83,7 +87,7 @@ namespace Mouse
                             PlayIdleAnimation();
                             yield return new WaitForSeconds(1f);
                             PlayWalkAnimation();
-                           SetDirection(1);
+                            SetDirection(1);
                         }
                         m_Rigidbody2D.velocity = new Vector2(m_WalkSpeed * m_Direction, m_Rigidbody2D.velocity.y);
                     }
@@ -94,8 +98,8 @@ namespace Mouse
 
         private void SetDirection(int direction)
         {
-           m_Direction = direction;
-           transform.localScale = new Vector3(-m_Direction, 1, 1);
+            m_Direction = direction;
+            transform.localScale = new Vector3(-m_Direction, 1, 1);
         }
 
         private void SetState(State state)

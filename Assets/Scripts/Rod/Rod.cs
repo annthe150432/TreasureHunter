@@ -32,5 +32,14 @@ public class Rod : MonoBehaviour
         
     }
 
-    
+   
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag.Equals("Mole") || collision.tag.Equals("MoleDiamond"))
+        {
+            Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(), collision, true);
+        }
+    }
+
 }
